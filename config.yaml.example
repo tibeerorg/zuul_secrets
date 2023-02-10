@@ -1,0 +1,30 @@
+---
+# the name of the tenant you are working with.
+# can be found under https://zuul.example.com/tenants
+tenant_name: tibeerorg
+
+# the name of the repo you want to create the secret for.
+# can be found here: https://zuul.example.com/t/osism/projects
+repo_name: tibeerorg/zuul_secrets
+
+# how your new generated secret should be named
+secret_name: example_secret
+
+# how you want to name the identifier inside your "secret_name".
+# A "secret_name" can contain multiple fields. 
+field_name: my_password
+
+# Filename for the file that contains the plain sensitive content (e.g. a password) that should be encrypted.
+input_file: encrypt_me.txt
+
+# The url of your zuul server
+zuul_host: zuul.example.com
+
+# The protocol of your zuul server (either 'https' or 'http')
+zuul_protocol: https
+
+# Some username by which you can be identified, e.g. a github handle.
+username: tibeer
+
+# The secret found in the _zuul.conf_ file on your server
+zuul_secret: some_long_random_string
